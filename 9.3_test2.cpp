@@ -1,5 +1,5 @@
 /*
-DIFERENCE BETWEEN 1, 2 AND 3:
+THE DIFERENCE BETWEEN THE FUNCTIONS 1, 2 AND 3:
     1: RETURNING A CONST REFERENCE PREVENTS CHANGING THE RETURNED (BY CONST REFERENCE) OBJECT IN THE MAIN FUNCTION
     2: CONST-QUALIFIED MEMBER FUNCTIONS (THAT RETURN A CONST REFERENCE) CANNOT CHANGE THE OBJECT INSIDE THAT FUNCTION 
     3. MEMBER FUNCTION THAT RETURN A COPY AND IS CONST-QUALIFIED CAN CHANGE THE COPY OF THE OBJECT BUT NOT THE OBJECT
@@ -46,8 +46,8 @@ int main()
         cout << s << " ";
 
     Name_pairs np3;
-    np3.get_name3().push_back("gn3"); // this should change the copy not the original name object, but how do I see the copy?
+    np3.get_name3().push_back("gn3"); // this should change np3 to have {ab, gn3} but it only holds "ab"
     cout << "\nnp3 object from main: ";
-    for (string s : np3.get_name3()) // this returns the name not the copy; cout in the function
+    for (string s : np3.get_name3()) 
         cout << s << " ";
 }
